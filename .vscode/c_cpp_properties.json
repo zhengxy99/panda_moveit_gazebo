@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/opt/ros/melodic/include/**",
+        "/home/cloud/catkin_ws/devel/include/**",
+        "/home/cloud/catkin_ws/src/backward_ros/include/**",
+        "/home/cloud/catkin_ws/src/camera_servo_driver/include/**",
+        "/home/cloud/catkin_ws/src/rm_75/ginger_msgs/include/**",
+        "/home/cloud/catkin_ws/src/realsense_gazebo_plugin/include/**",
+        "/home/cloud/catkin_ws/src/rm_75/rm_75_control/include/**",
+        "/home/cloud/catkin_ws/src/rm_75/rm_75_msgs/include/**",
+        "/home/cloud/catkin_ws/src/rm_75/robot_state_publish/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
