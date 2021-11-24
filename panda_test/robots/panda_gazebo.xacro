@@ -16,13 +16,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/link0.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/link0.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/collision/link0.stl"/>
+          <mesh filename="package://panda_test/meshes/collision/link0.stl"/>
         </geometry>
       </collision>
       <inertial>
@@ -42,13 +42,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/link1.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/link1.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/collision/link1.stl"/>
+          <mesh filename="package://panda_test/meshes/collision/link1.stl"/>
         </geometry>
       </collision>
       <inertial>
@@ -77,13 +77,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/link2.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/link2.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/collision/link2.stl"/>
+          <mesh filename="package://panda_test/meshes/collision/link2.stl"/>
         </geometry>
       </collision>
       <inertial>
@@ -112,13 +112,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/link3.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/link3.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/collision/link3.stl"/>
+          <mesh filename="package://panda_test/meshes/collision/link3.stl"/>
         </geometry>
       </collision>
       <inertial>
@@ -147,13 +147,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/link4.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/link4.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/collision/link4.stl"/>
+          <mesh filename="package://panda_test/meshes/collision/link4.stl"/>
         </geometry>
       </collision>
       <inertial>
@@ -182,13 +182,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/link5.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/link5.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/collision/link5.stl"/>
+          <mesh filename="package://panda_test/meshes/collision/link5.stl"/>
         </geometry>
       </collision>
       <inertial>
@@ -217,13 +217,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/link6.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/link6.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/collision/link6.stl"/>
+          <mesh filename="package://panda_test/meshes/collision/link6.stl"/>
         </geometry>
       </collision>
       <inertial>
@@ -252,13 +252,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/link7.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/link7.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/collision/link7.stl"/>
+          <mesh filename="package://panda_test/meshes/collision/link7.stl"/>
         </geometry>
       </collision>
       <inertial>
@@ -298,7 +298,7 @@
   </xacro:macro>
 
   <xacro:macro name="hand" params="connected_to:='' ns:='' xyz:='0 0 0' rpy:='0 0 0'">
-    <xacro:include filename="$(find franka_description)/robots/utils.xacro"/>
+    <xacro:include filename="$(find panda_test)/robots/utils.xacro"/>
 
     <xacro:unless value="${connected_to == ''}">
       <joint name="${ns}_hand_joint" type="fixed">
@@ -311,7 +311,7 @@
     <link name="${ns}_hand">
       <visual>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/hand.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/hand.dae"/>
         </geometry>
       </visual>
       <collision>
@@ -333,7 +333,7 @@
       <xacro:inertia-cylinder mass="15e-3" radius="0.01" h="0.04"/>
       <visual>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/finger.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/finger.dae"/>
         </geometry>
       </visual>
       <collision>
@@ -355,7 +355,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
         <geometry>
-          <mesh filename="package://franka_description/meshes/visual/finger.dae"/>
+          <mesh filename="package://panda_test/meshes/visual/finger.dae"/>
         </geometry>
       </visual>
       <collision>

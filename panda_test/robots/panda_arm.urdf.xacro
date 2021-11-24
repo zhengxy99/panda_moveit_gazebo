@@ -9,11 +9,11 @@
 
   <xacro:unless value="$(arg gazebo)">
     <!-- Create a URDF for a real hardware -->
-    <xacro:include filename="$(find franka_description)/robots/panda_arm.xacro" />
+    <xacro:include filename="$(find panda_test)/robots/panda_arm.xacro" />
     <xacro:panda_arm arm_id="${arm_id}" safety_distance="0.03"/>
 
     <xacro:if value="$(arg hand)">
-      <xacro:include filename="$(find franka_description)/robots/hand.xacro"/>
+      <xacro:include filename="$(find panda_test)/robots/hand.xacro"/>
       <xacro:hand ns="${arm_id}" rpy="0 0 ${-pi/4}" connected_to="${arm_id}_link8" safety_distance="0.03"/>
     </xacro:if>
   </xacro:unless>
@@ -24,9 +24,9 @@
     <xacro:arg name="rpy" default="0 0 0" />
 
     <!-- Create a simulatable URDF -->
-    <!-- <xacro:include filename="$(find franka_description)/robots/utils.xacro" /> -->
-    <xacro:include filename="$(find franka_description)/robots/panda.transmission.xacro" />
-    <xacro:include filename="$(find franka_description)/robots/panda_gazebo.xacro" />
+    <!-- <xacro:include filename="$(find panda_test)/robots/utils.xacro" /> -->
+    <xacro:include filename="$(find panda_test)/robots/panda.transmission.xacro" />
+    <xacro:include filename="$(find panda_test)/robots/panda_gazebo.xacro" />
 
     <xacro:panda_arm arm_id="${arm_id}" />
 
