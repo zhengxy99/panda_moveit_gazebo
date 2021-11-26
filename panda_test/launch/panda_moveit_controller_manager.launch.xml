@@ -9,5 +9,6 @@
 
   <!-- loads ros_controllers to the param server -->
   <!-- <rosparam file="$(find panda_test)/config/ros_controllers.yaml"/> -->
-  <rosparam file="$(find panda_test)/config/panda_controllers.yaml"/>
+  <!-- <rosparam file="$(find panda_test)/config/panda_controllers.yaml"/> -->
+  <rosparam file="$(find panda_test)/config/panda_gripper_controllers.yaml"/>
 </launch>
